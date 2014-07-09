@@ -3,7 +3,7 @@ class Player(object):
 		self.x_pos = x_pos
 		self.y_pos = y_pos
 		self.run_state=0
-		self.run_speed=3
+		self.run_speed=5
 		self.coord_direction=0 #2=stay_right, 1=right, -1=left, -2=stay_left
 		self.jump_boolean = False
 		self.jump_value = 10
@@ -22,8 +22,8 @@ class Player(object):
 			self.y_pos-=self.jump_value
 			self.jump_value-=2
 
-		if self.coord_direction==1 || self.coord_direction==-1:
-			self.x_coord+=self.run_speed*self.coord_direction			#x_Bewegung
+		if self.coord_direction==1 or self.coord_direction==-1:
+			self.x_pos+=self.run_speed*self.coord_direction			#x_Bewegung
 
 
 		self.run_state=(self.run_state+1)%3
@@ -51,18 +51,18 @@ class Player(object):
 
 
 	def get_Pos(self):
-		return x_pos,y_pos
+		return self.x_pos, self.y_pos
 
 
 	def get_img_ID(self):
-		if coord_direction==2:
-			image_state=0
-		elif coord_direction==-2:
-			image_state=3
-		elif coord_direction==1:
-			image_state=run_state
-		elif coord_direction==-1:
-			image_state=run_state+3
-		return image_state
+		if self.coord_direction==2:
+			self.image_state=0
+		elif self.coord_direction==-2:
+			self.image_state=3
+		elif self.coord_direction==1:
+			self.image_state=self.run_state
+		elif self.coord_direction==-1:
+			self.image_state=self.run_state+3
+		return self.image_state
 
 

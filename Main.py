@@ -1,4 +1,4 @@
-import GUI
+import GUI.GUI
 
 
 
