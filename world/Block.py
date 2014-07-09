@@ -2,8 +2,8 @@ class Block(object):
 	def __init__(self, typ, texture):
 		self.typ_block=typ #alles geraden(+0) durchgehen, alle ungerade nicht durchgehen
 		self.texture_block=texture
-		self.x_pos_block
-		self.y_pos_block
+		self.x_pos_block = 0
+		self.y_pos_block = 0
 
 
 	def getPos(self):
@@ -22,3 +22,5 @@ class Block(object):
 	def setTexture(self, texture):
 		self.texture_block = texture
 
+	def getTexture(self):
+		return self.texture_block
