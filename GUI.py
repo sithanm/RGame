@@ -1,18 +1,18 @@
 import pygame, sys, os
 from pygame.locals import *
-import Player
+import Creatures
 
 class GUI(object):
 	def __init__(self):
 		pygame.init()
 		self.load_images()
-		self.player = Player.Player(100, 100)
+		self.player = Creatures.Player.Player(100, 100)
 
 
 	def load_images(self):
 		self.img_player = []
 		for i in ["R_0.png", "R_1.png", "R_2.png", "R_3.png", "R_4.png", "R_5.png"]:
-			self.img_player += [pygame.image.load(os.path.join("GUI", "images", i))]
+			self.img_player += [pygame.image.load(os.path.join("images", i))]
 
 	def start(self):
 		self.clock = pygame.time.Clock()

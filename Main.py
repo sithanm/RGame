@@ -1,7 +1,7 @@
-import GUI.GUI
+import GUI
 
 
 
 if __name__=="__main__":
-	mygui = GUI.GUI.GUI()
+	mygui = GUI.GUI()
 	mygui.start()
