@@ -11,7 +11,7 @@ class GUI(object):
 
 	def load_images(self):
 		self.img_player = []
-		for i in ["R_1.png", "R_2.png", "R_3.png", "R_4.png"]:
+		for i in ["R_0.png", "R_1.png", "R_2.png", "R_3.png", "R_4.png", "R_5.png"]:
 			self.img_player += [pygame.image.load(os.path.join("GUI", "images", i))]
 
 	def start(self):
