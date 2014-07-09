@@ -9,6 +9,9 @@ class Block(object):
 	def getPos(self):
 		return self.x_pos_block, self.y_pos_block
 
+	def canIpass(self):
+		return self.typ_block   #!!!! nachbessern, sehr unsauber, da typ_block noch andere Werte in Zukunft bekommen wird!!!!
+
 
 	def setTyp(self, typ):
 		self.typ_block=typ
@@ -16,4 +19,3 @@ class Block(object):
 	def setTexture(self, texture):
 		self.texture_block = texture
 
-	
